@@ -378,36 +378,13 @@
         <p>Подпишитесь на рассылку!</p>
       </div>
       <div class="dannie_rasilki">
-        <?php
-        if(!isset($_POST['fio']) and !isset($_POST['email']))
-        {
-          ?>
+        
         <form action="send.php" method="post">
         <input class="name_inp" type="text" name="fio" placeholder="Ваше имя">
         <input class="mail_imp" type="email" name="email" placeholder="Ваш email">
         <button class="otprav_btn" type="submit">Отправить</button>
       </form>
-      <?php 
-     } 
-      else 
-      {
-        $fio = $_POST['fio'];
-        $email = $_POST['email'];
-        $fio = htmlspecialchars($fio);
-        $email = htmlspecialchars($email);
-        $fio = urldecode($fio);
-        $email = urldecode($email);
-        $fio = trim($fio);
-        $email = trim($email);
-        mail("gruzdev_ilya16@mail.ru", "Запрос на рассылку", "Имя:".$fio.". E-mail: ".$email ,"From: gruzdevily.temp.swtest@mail.ru \r\n");
-
-        if(mail("gruzdev_ilya16@mail.ru", "Запрос на рассылку", "Имя:".$fio.". E-mail: ".$email ,"From: gruzdevily.temp.swtest@mail.ru \r\n"))\
-          {
-            echo "сообщение успешно отправлено";
-        } else {
-            echo "при отправке сообщения возникли ошибки";
-          }
-          ?>
+      
 
       </div>
     </div>
