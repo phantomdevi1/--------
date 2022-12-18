@@ -5,6 +5,12 @@ $mail->CharSet = 'utf-8';
 
 $name = $_POST['fio'];
 $email = $_POST['email'];
+$name = htmlspecialchars($fio);
+$email = htmlspecialchars($email);
+$name = urldecode($fio);
+$email = urldecode($email);
+$name = trim($fio);
+$email = trim($email);
 
 //$mail->SMTPDebug = 3;                               // Enable verbose debug output
 
