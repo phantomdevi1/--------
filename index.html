@@ -379,14 +379,18 @@
       </div>
       <div class="dannie_rasilki">
         <?php
-        if(!isset($_POST['fio']) and !isset($_POST['email'])){
+        if(!isset($_POST['fio']) and !isset($_POST['email']))
+        {
           ?>
         <form action="send.php" method="post">
         <input class="name_inp" type="text" name="fio" placeholder="Ваше имя">
         <input class="mail_imp" type="email" name="email" placeholder="Ваш email">
         <button class="otprav_btn" type="submit">Отправить</button>
       </form>
-      <?php
+      <?php 
+     } 
+      else 
+      {
         $fio = $_POST['fio'];
         $email = $_POST['email'];
         $fio = htmlspecialchars($fio);
