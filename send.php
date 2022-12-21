@@ -32,7 +32,7 @@ $mail->addAddress('gruzdev_ilya16@mail.ru');     // Кому будет уход
 //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 $mail->isHTML(true);                                  // Set email format to HTML
 
-$mail->Subject = 'Заявка с тестового сайта';
+$mail->Subject = 'Заявка на подписку';
 $mail->Body    = '' .$name . ' оставил заявку, <br>Почта этого пользователя: ' .$email;
 $mail->AltBody = '';
 
